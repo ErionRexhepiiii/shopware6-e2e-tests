@@ -48,9 +48,9 @@ class StorefrontPage {
    */
   async selectFirstSearchResult() {
     // Target the product name link inside a product card/listing box
-   const firstProduct = this.page
-    .locator('a[href*="/detail/"], .product-box a, .product-name a, h2 a, h3 a')
-    .first();
+    const firstProduct = this.page
+  	.locator('a[href*="/detail/"], .product-box a, .product-name a, h2 a, h3 a')
+  	.first();
 
     await expect(firstProduct).toBeVisible({ timeout: 10000 });
     await firstProduct.click();
