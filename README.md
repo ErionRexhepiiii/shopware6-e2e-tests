@@ -114,7 +114,7 @@ Reports are saved to `reports/playwright-report/`.
 ## Assumptions
 
 1. **Demo store availability** — The shared demo store at the provided URL is online and accessible during test execution. Shared demos can be reset or go offline; this is outside our control.
-2. **"Shirt" search term** — The demo store is assumed to have at least one product matching the keyword "Shirt". This was the most broadly applicable term found during exploratory testing. If the catalogue changes, update `SEARCH_KEYWORD` in `helpers/testData.js`.
+2. **Product navigation** — The test navigates directly to /Demo-Produkt/SW10001, a known product on the demo store. If the catalogue changes, update the URL in guestCheckout.spec.js.
 3. **Cash on Delivery is enabled** — The payment method "Cash on Delivery" is assumed to be enabled in the demo store's admin settings.
 4. **English language** — All selectors targeting visible label text (e.g. `getByLabel(/first name/i)`) assume the storefront is in English.
 5. **No CAPTCHA / bot protection** — If the demo store introduces reCAPTCHA on the checkout form, the automation would require additional handling.
